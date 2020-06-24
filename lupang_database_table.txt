@@ -1,0 +1,133 @@
+CREATE TABLE notice (
+  uid int(11) NOT NULL AUTO_INCREMENT,
+  id varchar(16) NOT NULL DEFAULT '',
+  name varchar(20) NOT NULL DEFAULT '',
+  subject varchar(100) NOT NULL DEFAULT '',
+  comment text,
+  signdate varchar(30) NOT NULL DEFAULT '',
+  ref int(11) NOT NULL DEFAULT '0',
+  gongji enum('1','2','3') NOT NULL DEFAULT '2',
+  file1 varchar(40) NOT NULL DEFAULT '',
+  file1_o varchar(40) NOT NULL DEFAULT '',
+  file1_s varchar(40) NOT NULL DEFAULT '',
+  fid int(11),
+  thread varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+);
+CREATE TABLE qna(
+  uid int(11) NOT NULL AUTO_INCREMENT,
+  id varchar(16) NOT NULL DEFAULT '',
+  name varchar(20) NOT NULL DEFAULT '',
+  subject varchar(100) NOT NULL DEFAULT '',
+  comment text,
+  signdate varchar(30) NOT NULL DEFAULT '',
+  ref int(11) NOT NULL DEFAULT '0',
+  gongji enum('1','2','3') NOT NULL DEFAULT '2',
+  file1 varchar(40) NOT NULL DEFAULT '',
+  file1_o varchar(40) NOT NULL DEFAULT '',
+  file1_s varchar(40) NOT NULL DEFAULT '',
+  fid int(11),
+  thread varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+);
+CREATE TABLE gallery(
+  uid int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(20) NOT NULL DEFAULT '',
+  subject varchar(100) NOT NULL DEFAULT '',
+  comment text,
+  signdate varchar(30) NOT NULL DEFAULT '',
+  ref int(11) NOT NULL DEFAULT '0',
+  file1 varchar(40) NOT NULL DEFAULT '',
+  file1_o varchar(40) NOT NULL DEFAULT '',
+  file1_s varchar(40) NOT NULL DEFAULT '',
+  fid int(11),
+  thread varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+);
+CREATE TABLE product (
+  uid int(11) NOT NULL AUTO_INCREMENT,
+  email varchar(16) NOT NULL DEFAULT '',
+  price int(100) NOT NULL DEFAULT '0',
+  ref int(11) NOT NULL DEFAULT '0',
+  name varchar(30) NOT NULL DEFAULT '',
+  content varchar(500) NOT NULL DEFAULT '0',
+  kinds varchar(30) NOT NULL DEFAULT '',
+  delivery varchar(20) NOT NULL DEFAULT '',
+  amount int(11) NOT NULL DEFAULT '0',	
+  file1 varchar(40) NOT NULL DEFAULT '',
+  file2 varchar(40) NOT NULL DEFAULT '',
+  file3 varchar(40) NOT NULL DEFAULT '',
+  file4 varchar(40) NOT NULL DEFAULT '',
+  file5 varchar(40) NOT NULL DEFAULT '',
+  sum_file varchar(40) not null default '',
+  delivery_company varchar(40) not null default '',
+  company varchar(30) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+);
+
+CREATE TABLE shoppingcart (
+  uid int(20) NOT NULL AUTO_INCREMENT,
+  pt_uid int(20) NOT NULL DEFAULT '0',
+  email varchar(40) NOT NULL DEFAULT '',
+  price int(100) NOT NULL DEFAULT '0',
+  name varchar(30) NOT NULL DEFAULT '',
+  delivery varchar(30) NOT NULL DEFAULT '',
+  amount int(20) NOT NULL DEFAULT '0',	
+  file1 varchar(60) NOT NULL DEFAULT '',
+  PRIMARY KEY (`uid`)
+);
+
+CREATE TABLE comment (
+  uid int(11) NOT NULL AUTO_INCREMENT,
+  tb_uid int(11),	
+  email varchar(20) NOT NULL DEFAULT '',
+  name varchar(30) NOT NULL DEFAULT '',
+  comment text,
+  data varchar(60)not null default"",	
+  PRIMARY KEY (`uid`)
+);
+
+create table member2 (
+email varchar(50) primary key ,
+pass varchar(20) not null default '' ,
+name varchar(20) not null default '' ,
+mobile1 varchar(3) not null default '' ,
+mobile2 varchar(50) not null default '' , 
+level varchar(4) default '',
+companynumber varchar(25) default '1',
+company varchar(30) default '',
+account1 varchar(20) default '',
+account2 varchar(30) default '',
+file1 varchar(40) default ''
+);
+
+create table buy(
+uid int(11) NOT NULL AUTO_INCREMENT,
+buyer_name varchar(50) NOT NULL DEFAULT '',
+buyer_mobile1 varchar(40) NOT NULL DEFAULT '',
+buyer_mobile2 varchar(40) NOT NULL DEFAULT '',
+email varchar(70) NOT NULL DEFAULT '',
+product_uid varchar(100) NOT NULL DEFAULT '',
+amount int not null NOT NULL DEFAULT '0',
+delivery_name varchar(40) NOT NULL DEFAULT '',
+delivery_mobile1 varchar(40) NOT NULL DEFAULT '',
+delivery_mobile2 varchar(40) NOT NULL DEFAULT '',
+addr1 varchar(40) NOT NULL DEFAULT '',
+addr2 varchar(100) NOT NULL DEFAULT '',
+addr3 varchar(100) NOT NULL DEFAULT '',
+addr4 varchar(100) NOT NULL DEFAULT '',
+content text ,
+buy_date varchar(50) NOT NULL DEFAULT '',
+method varchar(30),
+primary key(uid)
+);
+create table picture(
+  file1 varchar(40) NOT NULL DEFAULT 'NULL',
+  file2 varchar(40) NOT NULL DEFAULT 'NULL',
+  file3 varchar(40) NOT NULL DEFAULT 'NULL',
+  file4 varchar(40) NOT NULL DEFAULT 'NULL',
+  pass1 varchar(40) NOT NULL DEFAULT 'NULL',
+  pass2 varchar(40) NOT NULL DEFAULT 'NULL',
+  pass3 varchar(40) NOT NULL DEFAULT 'NULL',
+  pass4 varchar(40) NOT NULL DEFAULT 'NULL'	
+);

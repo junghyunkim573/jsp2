@@ -1,0 +1,719 @@
+@charset "UTF-8";
+		    /* 여백 초기화 */   
+            body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form{margin:0;padding:0;}
+
+            /* a 링크 초기화 */
+            a {color: #222; text-decoration: none;}
+            a:hover {color: #390;}
+
+            /* 폰트 초기화 */
+            body, input, textarea, select, button, table {
+                font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
+
+            /* 블릿기호 초기화 */
+            dl,ul,li,ol,menu {list-style:none;}
+
+            /* 제목 태그 초기화 */
+            h1,h2,h3,h4,h5,h6 {font-size: 13px; font-weight: normal;}
+
+            /* 테두리 초기화 */
+            img {border:0 none;}
+            .container {width: 1100px; margin: 0 auto; height: inherit;}
+
+            /* 레이아웃 */
+            #wrap {width: 100%; min-height: 100%;  margin:0; }
+            #section{overflow: hidden;}
+            #header {width: 100%; height: 130px; }
+            #contents {width: 100%; height: 50px; }
+            #footer { width: 100%; height: 155px; bottom:0;}
+            #push {  height: 155px;}
+            
+
+            .left{float:left;}     
+            .right{float:right;}
+
+            /*헤더*/
+            .header .header-menu{ background-color: #e9f3ff; height: 30px;}
+            .header .header-menu a{ color:black; padding: 5px; display: inline-block;}
+            .header .header-tit {height: 100px; background-color: white; float: left;}
+            .header .header-tit .header-left{width:100px; height: 100px; float:left; margin-right: 30px}
+            .header .header-tit .header-left img{width:100px; height: 100px;}
+            .header .header-tit .header-center {padding-top:15px;float:left; width:740px; text-align: center;  }
+            .header .header-tit .header-center .icon0{float:left;  width:180px; height:60px; overflow:auto;}
+            .header .header-tit .header-center fieldset{ border:1px solid skyblue; margin-top: 13px; margin-bottom: 13px; width:555px; height:inherit;  position: relative;
+                                                        display: table;}
+            .header .header-tit .header-center select{ border:0px; display: table; float:left; border-right:1px solid skyblue; width: 20%; height: 35px; background-color: white;}
+            .header .header-tit .header-center input{display: table; width:70%; float:left; border:none; height: 35px;}
+            .header .header-tit .header-center button{display: table; border: 0px;float:left;  background-color:white; width:5%; height:35px;}
+            .header .header-tit .header-center .icon1{width:26px; height: 26px;}
+            .header .header-tit .header-center .icon2{width:26px; height: 26px;}
+            .header .header-tit .header-center div a{margin: 5px; 20px; color:black; font-weight: 500;}
+            
+            .header .header-tit .header-right {width: 200px; margin-left:20px;}
+            .header .header-tit .header-right img{width: 70px; height: 70px;  margin-top: 10px; margin-left:10px;}
+            
+            /*네비 수정*/
+
+            .menubar ul{
+            background: white;
+            margin:0px;
+            padding:0;
+            }
+
+            .menubar li a{
+            background: white;
+            color:black;
+            display:block;
+            font-weight:normal;
+            margin:0px;
+            padding:10px 30px;
+            text-align:left;
+            text-decoration:none;
+            line-height: -10px;      
+            }
+
+            .menubar li ul{
+            background: white;
+            display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+            height:40px;
+            color:black;
+            padding:0px;
+            margin:0px;
+            border:0px;
+            position:absolute;
+            width:30px;
+            z-index:450;
+            top:10em;
+            /*left:0;*/
+            }
+
+            .menubar li:hover ul{
+            display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+            }
+
+            .menubar li li {
+            background: white;
+            display:block;
+            float:none;
+            margin:0px;
+            padding:0px;
+            width:180px;
+            height:30px;
+            }
+
+            .menubar li:hover li a{
+            font-size:14px;
+            background:none;
+            }
+
+            .menubar li ul a{
+            display:block;
+            height:25x;
+            font-size:12px;
+            font-style:normal;
+            margin:0px;
+            text-align:left;
+            }
+
+            .menubar li ul a:hover, .menubar li ul li:hover a{
+            color: blue;
+            background: white;
+            font-size:15px;    
+            border:0px;
+            }
+                                    
+            /*section 이미지 처리*/
+            .section_img{ float: left; width=100%;height=500px; position:relative; }
+     
+            /*베스트 메뉴*/
+            .best_box {border:1px solid black; width:1100px;}
+            .best_title h1{ font-size: 26px; font-weight: 600;}
+            .best_title h1 span{ font-size: 13px; font-weight: 400;}
+            
+            /*상품등록*/
+             #intro{background-color: #ffffff; overflow: hidden; width: 1100px; margin-left: 200px;}
+            .div{float:left; margin: 10px 10px 10px 10px;}
+            .div3{width:160px; height:300px; padding: 20px 20px 20px 20px;}
+            .div3:hover, div3 a:hover{background-color:#ffffff; width: 160px; height: 300px; box-shadow:2px 2px 2px #e9f3ff; }
+            .ori{text-align: center; color:black;}
+            .ori a:hover{text-align: center; color:blue;}
+            .ori1{text-align: center; color:black; fontsize:15px;}
+            
+            /*상품 등록 줄>*/           
+            #intro1{width: 1100px; }
+            
+            /*상품리스트뷰*/
+            .product_list{text-align: center; background-color: #e9f3ff;}
+            
+            /*링크*/
+            .text{width;100% height: 30px text-aligm=left; font-style: normal font-size:12px; height: 30px; background-color: #e9f3ff; }
+            .text a:hover{color:blue;}
+            
+            /*옆라인 카테고리*/    
+            #div{width: 200px; height: 500px; border: 1px solid; border-color: #e9f3ff; float: left;}
+            #div ul{margin:0px; padding:0;}
+            #div li{color:black;font-weight:normal;margin: 20px;  font-size: 18px; display:inline;}
+            #div li a{color:black;font-weight:normal; margin:0px;
+            padding:0px 10px; text-align:left; text-decoration:none;}
+
+            #div li ul{display: block; /* 평상시에는 드랍메뉴가 안보이게 하기 */ 
+            color:black; padding:0px; margin:0px; border:0px; position:absolute;top:12em;}
+            #div li:hover ul{display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */}
+            #div li li {display:block; float:none; margin:0px; padding:0px; width:180px; height:30px;}
+            #div li ul a{display:block; height:25x; font-size:14px; font-style:normal; margin:0px; text-align:left;}
+            #div li ul a:hover, #div li ul li:hover a{color: blue; border:0px;}
+            
+             /*카테고리 페이지 section 스크립트 이미지 처리*/
+            .section_img1{ float: left; height:inherit;}
+            .section_box{  width:898px; margin-top:-500px; margin-left: 202px; position:relative; height:500px; }
+            .section_purchase{  width:100px; height:50px;  position: absolute; bottom:51px; right:100px;}
+            
+            .categoryAll_section_box{ width:898px; margin-left: 202px; position:relative; height:inherit; }
+          
+            .categoryAll_intro{background-color: #ffffff; overflow: hidden; width: 880px;  }
+            
+            /*상품 순서 보기*/
+            .stext{width;898px; height: 30px; text-aligm=left;margin-left: 202px; font-style: normal font-size:12px; height: 30px; background-color: #fafafa; }
+
+            /*상품등록*/
+             #intro3{background-color: #ffffff; overflow: hidden; width: 900px; margin-left: 200px;}
+            .div{float: left; margin: 10px 10px 10px 10px;}
+            .div3{width: 160px; height: 300px; padding: 20px 20px 20px 20px;}
+            .div3:hover, div3 a:hover{background-color:#ffffff; width: 160px; height: 300px; box-shadow:2px 2px 2px #e9f3ff; }
+            .ori{text-align: center; color:black;}
+            .ori a:hover{text-align: center; color:blue;}
+            .ori1{text-align: center; color:black; font-size:20px;}
+            
+            /*상품 등록 줄>*/           
+            #intro4{width: 900px; margin-top: -300px; margin-left: 200px; }
+            
+             /*상품 상세페이지*/
+            .div1{float:left; width:80px;height:480px;padding: 10px 10px 10px 10px;}
+            .div2{float:left; width:430px;height:480px; padding: 10px 10px 10px 10px;}
+            .div4{width:480px;height:700px; margin-left: 550px; padding: 10px 10px 10px 10px;}
+            .text1{font-size:18px; }
+            
+            /*상품 구매및 장바구니*/
+            .box{width: 100px;height: 50px; border: 1px solid #e9f3ff;  }
+            .box1{border: 0px;width: 100PX; height: 50px;text-align:center;}
+            .box2{float:left; width: 204px; height: 54px; text-align:center; margin-top: -55px; margin-left: 130px; border: 2px solid blue;}
+            .box3{border: 0px;width: 200PX; height: 50px;text-align:center; color:blue; background: white;font-size: 18px;}
+            .box4{float:left; width: 200px; height: 50px; margin-top: -55px; margin-left: 345px; background: blue;}
+            .box5{border: 0px;width: 200PX; height: 50px;text-align:center; color:white; background: blue;font-size: 18px;}
+            .box3:hover{background: white; color:blueviolet}
+            .box5:hover{background: blueviolet;}
+            
+            /*다른상품 섬네일*/
+            .wab{float: left; margin: 10px 10px 10px 10px;}
+            .wab{width: 160px; height: 230px; padding: 20px 20px 20px 20px;}
+            .wab2:hover, wab2 a:hover{background-color:#ffffff; width: 160px; height: 230px;}
+            .ori{text-align: center; color:black;}
+            .ori a:hover{text-align: center; color:blue;}
+            .ori1{text-align: center; color:black; font-size:16px;}
+            .ori2{font-size:18px;}
+            
+            /*상품 상세보기 및 평 문의 배송관련*/
+            .pdiv{background: white; float:left; width: 1100px;}
+            .pdiv1{float:left;width:250px; height:30px; font-size: 18px; color: black; border: 1px solid #e9f3ff; padding: 10px 10px 10px 10px; text-align: center;}
+            .pdiv2{float:left;width:250px; height:30px; font-size: 18px; color: black; border: 1px solid #e9f3ff; padding: 10px 10px 10px 10px; text-align: center;}
+            .pdiv3{float:left;width:250px; height:30px; font-size: 18px; color: black; border: 1px solid #e9f3ff; padding: 10px 10px 10px 10px; text-align: center;}
+            .pdiv4{float:left;width:250px; height:30px; font-size: 18px; color: black; border: 1px solid #e9f3ff; padding: 10px 10px 10px 10px; text-align: center;}
+            .pdiv1:hover{background: white;padding:10px 10px 10px 10px; border: none; width:250px; height:30px;text-align: center;}
+            .pdiv2:hover{background: white;padding:10px 10px 10px 10px; border: none; width:250px; height:30px;text-align: center;}
+            .pdiv3:hover{background: white;padding:10px 10px 10px 10px; border: none; width:250px; height:30px;text-align: center;}
+            .pdiv4:hover{background: white;padding:10px 10px 10px 10px; border: none; width:250px; height:30px;text-align: center;}
+            .ptext{font-size: 14px;}
+            .ptext1{color:#bdd0e6; font-size: 12px;}
+            .ptext2{font-size: 18px;}
+            .sdiv{background: white; float:left; width: 1098px; border: 1px solid #dbeeff;}
+            .sdiv2{float: right; border: 1px solid blueviolet; width:70px; heigt:30px; font-size: 16px; color:blueviolet; margin: 5px 5px 5px 5px;}
+            .sdiv3{background: white; float:left; width: 1098px;}
+            .tb{border: 1px solid #e9f3ff; font-size: 15px;}
+            .tb1{width:600px; border: 1px solid #e9f3ff; font-size: 15px; margin:0 auto;}
+           
+			/*foot */
+	        .foot_new { border-top: #ddd solid 2px;  background: #fff; margin-top:40px;}
+	        .foot_new .footer-layer1{    border-bottom: #ddd solid 1px;    height: 34px;    text-align: center;    padding-top: 15px;    white-space: nowrap;}
+	        .foot_new .footer-layer1 a{    display: inline-block;    white-space: nowrap;   padding: 0 25px;   font-size: 12px;    color: #555; height: 12px;    border-left: #888 solid 1px;}
+	        .foot_new .footer-layer1 a:first-child { border-left:none;  }
+	        .foot_new .footer-layer2 { width: 1020px; height: 100px; margin: 30px auto;   font-size: 12px; color: #555;   line-height: 150%;}
+	        .foot_new .footer-layer2 img{   width: 147px;  height: 40px; padding-right:30px;   margin-left: 10px; float: left;}
+	        .foot_new .footer-layer2 address {   float: left;    width: 260px;}
+	        .foot_new .footer-layer2 div{ float: left;    width: 260px;}
+            
+        .container2 {width:500px; height: 900px; margin: 0 auto; background-color: white;}
+        
+         /*로그인 페이지 로고 가운데 정렬*/
+        .container2 .title_img{display: block; margin: 0 auto; width: 250px; height: 80px; padding-top:50px;}
+        
+        .login_box{border: 1px solid #666; width: 499px; height: 50px; margin-bottom: 30px; margin:15px auto 30px auto; display: table; position: relative; width: 500px; top:150px; display: block;}
+        .login_box1{width: 499px; height: 20px; display: table; position: relative; width: 500px; top:130px; display: block;}    
+        
+        /*선긋기*/
+        .line{border: 1px solid #666; width: 400px; margin: 0 auto;}
+        
+        /*로그인 박스 인풋 이미지 설정*/
+        .login_box{border: 1px solid #666; width: 502px; height: 50px; margin-bottom: 30px; margin:15px auto 30px auto; display:table; position: relative; }    
+        .login_box_icon{width:10%; height: 50px; float: left; display: table; margin: 0px; padding: 0px;  }
+        .login_box_icon img{width: 100%; height: 50px; margin: 0px; padding: 0px; cursor:pointer; }
+        .login_box_input{width:90%; height: 50px; float: left; display: table; margin: 0px; padding: 0px;  border-left: 1px solid #666; overflow: hidden;}
+        .login_input{width:100%; height: 50px;  border:0px; font-size: 20px; font-weight: 500; padding-left: 5px;}
+        .login_input1{float: left; width:45%; height: 20px;  border:0px; font-size: 12px; font-weight: 500; padding-left: 5px;}
+        .login_input2{float: right; text-align: right; width:45%; height: 20px;  border:0px; font-size: 12px; font-weight: 500; padding-left: 5px;}
+        .login_select{width:18%; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .login_input_phone{width:70%; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}        
+        .login_box_submit{ width: 500px; top: 150px; height: 50px; margin-bottom: 30px; margin:20px auto 20px auto; display: table; position: relative; width: 100%; display: block; }
+        .login_button{width:80%; margin: 0 auto; height: 48px;  border: 0px; font-size: 20px; font-weight:600; display: table; background-color: #0074e9; color: white; box-shadow: 2px 2px 5px #0074e9; cursor:pointer;}
+        
+             /*판매자 회원 가입*/
+        .sell_join_box{border-bottom: 2px solid #666; width: 502px; top: 150px; height: 50px; margin-bottom: 30px; margin:15px auto 30px auto; display:table; position: relative; }
+        
+        .sell_join_title{width:27%; height: 50px; float: left; display: table; margin: 0px; padding: 0px; font-size:18px; font_weight:500; line-height:50px; text-align:center;}
+        .sell_join_input_box{width:73%; height: 40px; float: left; display: table; margin: 0px; padding: 0px; overflow: hidden; border-left: 1px solid #666;}
+        
+        .sell_join_input{width:100%; height: 50px; float: left; display: table; margin: 0px auto; padding: 0px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .sell_join_input_file{width:100%; height: 30px; float: left; display: table; margin: 0px auto; line-height:30px; padding: 10px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .sell_join_select{width:18%; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .sell_input_phone{width:50%; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}
+        
+        
+        
+        /*회원 수정 페이지 박스*/
+        .box-modify { width:400px; height: 40px; distable:table;  margin: 20px auto; }
+        .modify_button1{width:100%; margin: 0 auto; height: 38px;  border: 1px solid #0074e9; font-size: 16px; font-weight:550; background-color: #0074e9; color: white; box-shadow: 2px 2px 5px #0074e9; cursor:pointer;}
+        
+        .modify_button2{width:100%; margin: 0 auto; height: 38px;  border: 1px solid #0074e9; font-size: 16px; font-weight:550; background-color: white; color: #0074e9; box-shadow: 2px 2px 5px #0074e9; cursor:pointer;}
+
+		/*상품 등록 페이지*/
+        .write_join_box1{border-bottom: 2px solid #666; border-top: 2px solid #666; width: 502px; height: 10px; display:table; position: relative; }
+        .write_join_box{border-bottom: 2px solid #666; width: 502px; height: 10px;   display:table; position: relative; }
+        
+        .write_join_title{width:27%; height: 10px; float: left; display: table; margin: 0px; line-height:40px; font-size:15px; font_weight:500; text-align:center;}
+        .write_join_input_box{width:72%; height: 40px; float: left; display: table; margin: 0px; padding: 0px 5px 0px 0px; overflow: hidden; border-left: 1px solid #666;}
+        
+        .write_join_input{width:50%; height: 30px; float: left; display: table; margin: 0px auto; padding: 5px; border:0px solid white; overflow: hidden;  font-size:15px;}
+        .write_join_input_file{width:80%; height: 30px; float: left; display: table; margin: 0px auto;  padding: 5px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .write_join_select{width:30%; height: 40px;  border: 0px; font-size: 15px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .write_input_phone{width:30%; height: 30px;  border: 0px; font-size: 13px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}
+        .write_join_radio_box{float: left; padding: 5px; line-height:30px; overflow: hidden; border-left: 1px solid #666;}
+      	
+      	/* 리스트 출력 */
+		#dvHeadRow{width:880px; height:35px; background:#d9fd9b; margin:0px 50px; text-align:center; }
+		#dvHeadRow ul{display:flex;}
+		#dvHeadRow ul li{flex:1; padding-top:7px; }
+		#dvHeadRow ul li:nth-child(2){flex:none; width:400px; padding-top:7px;}
+		.list3{flex:none; width:400px; padding-top:7px;}
+		
+		
+		.dvRow{width:880px; height:35px; background:white; margin:0px 50px; text-align:center; }
+		.dvRow ul {display:flex;}
+		.dvRow ul li {flex:0.8; border-bottom:1px solid gray; padding:7px 0px; }
+		.dvRow ul li:nth-child(2){flex:none; width:400px; text-align:left; }
+		.dvCount{ float:left; width:50px;  padding-top:5px; border-bottom-style:solid;  border-bottom-width:1px;   border-bottom-color:#ccc;}
+		.write_list { float:right; margin:0px 50px 0px 0px; }
+		.write_img { float:right; margin:0px; width:30px; height:30px;}
+		
+		/*상품 수정 페이지*/
+        .modify_join_box1{border-bottom: 2px solid #666; border-top: 2px solid #666; margin: 0 auto; width: 502px; height: 10px; display:table; position: relative; }
+        .modify_join_box{border-bottom: 2px solid #666; margin: 0 auto; width: 502px; height: 10px;   display:table; position: relative; }
+        
+        .modify_join_title{width:27%; height: 10px; float: left; display: table; margin: 0px; line-height:40px; font-size:15px; font_weight:500; text-align:center;}
+        .modify_join_input_box{width:72%; height: 40px; float: left; display: table; margin: 0px; padding: 0px 5px 0px 0px; overflow: hidden; border-left: 1px solid #666;}
+        
+        .modify_join_input{width:50%; height: 30px; float: left; display: table; margin: 0px auto; padding: 5px; border:0px solid white; overflow: hidden;  font-size:15px;}
+        .modify_join_input_file{width:80%; height: 30px; float: left; display: table; margin: 0px auto;  padding: 5px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .modify_join_select{width:30%; height: 40px;  border: 0px; font-size: 15px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .modify_input_phone{width:30%; height: 30px;  border: 0px; font-size: 13px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}
+        .modify_join_radio_box{float: left; padding: 5px; line-height:30px; overflow: hidden; border-left: 1px solid #666;}
+        
+        /*상품 뷰 페이지*/
+        .view_join_box1{border-bottom: 2px solid #666; border-top: 2px solid #666; margin: 0 auto; width: 502px; height: 10px; display:table; position: relative; }
+        .view_join_box{border-bottom: 2px solid #666; margin: 0 auto; width: 502px; height: 10px;   display:table; position: relative; }
+        
+        .view_join_title{width:27%; height: 10px; float: left; display: table; margin: 0px; line-height:40px; font-size:15px; font_weight:500; text-align:center;}
+        .view_join_input_box{width:72%; height: 40px; float: left; display: table; margin: 0px; padding: 0px 5px 0px 0px; overflow: hidden; border-left: 1px solid #666;}
+        
+        .view_join_input{width:50%; height: 30px; float: left; display: table; margin: 0px auto; padding: 5px; border:0px solid white; overflow: hidden;  font-size:15px;}
+        .view_join_input_file{width:80%; height: 30px; float: left; display: table; margin: 0px auto;  padding: 5px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .view_join_select{width:30%; height: 40px;  border: 0px; font-size: 15px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .view_input_phone{width:30%; height: 30px;  border: 0px; font-size: 13px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}
+        .view_join_radio_box{float: left; padding: 5px; line-height:30px; overflow: hidden; border-left: 1px solid #666;}
+        
+               
+        /*장바구니 수정 페이지*/
+        .cartmodify_join_box1{border-bottom: 2px solid #666; border-top: 2px solid #666; width: 502px; height: 10px; display:table; position: relative; }
+        .cartmodify_join_box{border-bottom: 2px solid #666; width: 502px; height: 10px;   display:table; position: relative; }
+        
+        .cartmodify_join_title{width:27%; height: 10px; float: left; display: table; margin: 0px; line-height:40px; font-size:15px; font_weight:500; text-align:center;}
+        .cartmodify_join_input_box{width:72%; height: 40px; float: left; display: table; margin: 0px; padding: 0px 5px 0px 0px; overflow: hidden; border-left: 1px solid #666;}
+        
+        .cartmodify_join_input{width:50%; height: 30px; float: left; display: table; margin: 0px auto; padding: 5px; border:0px solid white; overflow: hidden;  font-size:15px;}
+        .cartmodify_join_input_file{width:80%; height: 30px; float: left; display: table; margin: 0px auto;  padding: 5px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .cartmodify_join_select{width:30%; height: 40px;  border: 0px; font-size: 15px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #666;}
+        .cartmodify_input_phone{width:30%; height: 30px;  border: 0px; font-size: 13px; font-weight: 500; display: table; padding-left: 5px; border-left: 1px solid #666;}
+        .cartmodify_join_radio_box{float: left; padding: 5px; line-height:30px; overflow: hidden; border-left: 1px solid #666;}
+        
+       /*장바구니 뷰 페이지*/
+        .cartview_join_box1{border-top: 2px solid #666; width: 1100px; display:table; position: relative; }
+        .cartview_join_box2{float: left; border-top: 2px solid #0060d0; border-left: 2px solid #0060d0; border-right: 2px solid #0060d0; width: 546px; height: 50px;   display:table; position: relative; font-size:24px; text-align:center; line-height:50px; }
+        .cartview_join_box3{float: left; border-bottom: 2px solid #0060d0; border-top: 2px solid #e5e5e5; border-right: 1px solid #e5e5e5; width: 549px; height: 50px;   display:table; position: relative; font-size:24px; text-align:center; line-height:50px; background-color: #f5f5f5 }
+        
+        .cartview_join_title1{width:180px; height: 40px; float: left; display: table;  line-height:40px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5}
+        .cartview_join_title2{width:620px; height: 40px; float: left; display: table;  line-height:40px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5}
+        .cartview_join_title3{width:100px; height: 40px; float: left; display: table;  line-height:40px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5}
+        .cartview_join_title4{width:100px; height: 40px; float: left; display: table;  line-height:40px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5}
+        
+        .cartview_join_input_box1{width:140px; height: 60px; float: left; display: table; margin: 0px; padding: 20px;  border-bottom: 1px solid #e5e5e5;font-size:15px;}
+        .cartview_join_input_box2{width:620px; height: 68px; line-height:50px; float: left; display: table; margin: 0px; padding: 0px;  border-bottom: 1px solid #e5e5e5;font-size:15px;}
+        .cartview_join_input_box3{width:620px; height: 24px; line-height:50px; float: left; display: table;  margin-top: 4px; border-bottom: 1px solid #e5e5e5;font-size:15px;}
+        .cartview_join_input_box4{width:100px; height: 66px; text-align:center; float: left; display: table; margin-top: -50px; padding: 20px 0px 20px 0px;  border-bottom: 1px solid #e5e5e5;font-size:15px;line-height:60px;} 
+        .cartview_join_input_box5{width:100px; height: 66px; text-align:center; float: left; display: table; margin-top: -50px; padding: 20px 0px 20px 0px;  border-bottom: 1px solid #e5e5e5;font-size:15px;line-height:60px;}
+        .cartview_join_input_box6{width:100px; height: 86px; text-align:center; float: left; display: table; margin-top: -50px; padding: 20px 0px 0px 0px;  border-bottom: 1px solid #e5e5e5;font-size:15px; line-height:60px;}    
+        
+        .cartview_join_input1{width:550px; height: 100px; float: left; display: table;  line-height:40px; font-size:15px; text-align:right; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5;}
+        .cartview_join_input2{width:200px; height: 100px; float: left; display: table;  line-height:100px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5;}
+        .cartview_join_input3{width:200px; height: 100px; float: left; display: table;  line-height:100px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5;}
+        .cartview_join_input4{width:150px; height: 100px; float: left; display: table;  line-height:100px; font-size:15px; text-align:center; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #f5f5f5;}    
+        
+        .cartview_join_input_file1{width:120px; height: 60px; float: left; display: table;  line-height:60px; font-size:15px; text-align:center; }
+        .cartview_join_input_file2{width:120px; height: 60px; float: left; display: table;  line-height:60px; padding: 10px 0px 0px 0px; font-size:15px; text-align:center; }
+                            
+        .cartview_join_input{width:100px; height: 40px;  border: 0px; font-size: 15px; line-height:30px; display: table; float:left; border: 1px solid #e5e5e5; background-color: white;}
+            
+        .cartview_join_box{width:1100px; height: 80px;  border: 0px; font-size: 15px; text-align:center; display: table; line-height:80px; border: 5px solid #e5e5e5;}
+        .cartview_box1{float: left; width: 540px; display:table; position: relative; padding-right: 3px; }
+        .cartview_box2{float: left; width: 540px; display:table; position: relative; padding-left: 3px;}
+        .cart_box1{float: right; width:200px; height: 60px; border: 2px solid blue; border-radius: 10px; font-size: 20px; line-height:30px; display: table; color:blue; background-color: white;}
+        .cart_box2{float: left; width:200px; height: 60px; border: 2px solid blue; border-radius: 10px; font-size: 20px; line-height:30px; display: table; color:white; background-color: blue;}    
+        .cart_box3{float: right; width: 20px;height: 20px; border: 1px solid #e9f3ff;  }
+        .cart_box4{border: 0px;width: 60PX; height: 20px;text-align:center;}
+        .cart_box5{border: 0px;width: 60PX; height: 20px;}
+        .cart_box6{border: 0px;width: 60PX; height: 20px;text-align:center;}
+        .cart_box7{float: right; width: 60px;height: 46px; border: 1px solid #e9f3ff; line-height: 46px;}
+        .cart_box8{float: right; width: 120px;height: 20px; border: 1px solid #e9f3ff;  }
+        .cartview_p{float: right; width: 150px; font-size:20;line-height:20px;}
+        
+        .cartview_input{width: 80px; height 40px; border: 2px solid blue; border-radius: 5px; font-size: 18px; line-height:40px; display: table; color: blue; background-color: white;}
+         h1{font-size: 30px;}   
+         /*구매사이트*/
+        .purchase_line{}   
+        .purchase_text1{float: left; width: 1100px; height: 80px; border-bottom: 3px solid #666; font-size: 30px; line-height: 80px; display: table;}  
+        .purchase_text2{float: right;  font-size: 16px; color: blue; line-height: 80px; display: table;}
+        .purchase_text3{float: right;  font-size: 16px; color: gray; line-height: 80px; display: table;}
+        .purchase_text4{float: right; width: 1100px; height: 80px; border-bottom: 2px solid #e5e5e5; font-size: 20px; line-height: 80px; display: table;}
+        .purchase_text5{float: left;} 
+        .purchase_text6{float: left; width: 80px; height: 20px; border: 1px solid #e5e5e5; font-size: 16px; line-height: 20px; margin-top: 30px; margin-left: 20px; display: table;}
+        .purchase_text7{float: right; width: 1100px; height: 40px; margin-top: 20px; border-bottom: 2px solid #e5e5e5; font-size: 20px; line-height: 60px; display: table;}
+        .purchase_text8{float: left; text-align: center; width: 1000px; height: 60px; font-size: 12px; line-height: 60px; display: table;}      
+        .purchase_table1{float: left; width: 195px; height: 40px; border-bottom: 1px solid #e5e5e5; font-size: 14px; line-height: 40px; display: table; background-color: #f5f5f5;}
+        .purchase_table2{float: left; width: 885px; height: 40px; border-bottom: 1px solid #e5e5e5; font-size: 14px; line-height: 40px; display: table; padding-left: 15px; }
+        .purchase_table3{float: left; width: 195px; height: 80px; border-bottom: 1px solid #e5e5e5; font-size: 14px; line-height: 80px; display: table; background-color: #f5f5f5;}
+        .purchase_table4{float: left; width: 885px; height: 40px;  font-size: 14px; line-height: 40px; display: table; padding-left: 15px; }
+        .purchase_table5{float: left; width: 885px; height: 40px; border-bottom: 1px solid #e5e5e5; font-size: 14px; line-height: 40px; display: table; padding-left: 15px; }
+        .purchase_table6{float: left; width: 1080px; height: 50px; border-top: 2px solid #e5e5e5; border-left: 2px solid #e5e5e5; border-right: 2px solid #e5e5e5; font-size: 20px; line-height: 50px; color: brown; display: table; padding-left: 20px; background-color: #f5f5f5;}
+        .purchase_table7{float: left; width: 1080px; height: 50px; border-bottom: 2px solid #e5e5e5; border-left: 2px solid #e5e5e5; border-right: 2px solid #e5e5e5; font-size: 20px; line-height: 50px; display: table; padding-left: 20px; } 
+        .purchase_table8{float: left; width: 195px; height: 357px; border-bottom: 1px solid #e5e5e5; font-size: 14px; line-height: 80px; display: table; background-color: #f5f5f5;}
+        .purchase_table9{float: left; width: 885px; height: 120px; border: 2px solid #e5e5e5; display: table; margin-left: 15px;  background-color: #f5f5f5;}
+        .purchase_table10{float: left; width: 885px; height: 40px;  line-height: 40px; border-bottom: 1px solid #e5e5e5;  display: table; padding-left: 15px; }
+        .purchase_table_table{float: left; width: 855px; height: 50px; font-size: 14px; line-height: 50px; border-bottom: 1px solid #e5e5e5; display: table; margin: 0px 15px 0px 15px;}
+        .purchase_table_table2{float: left; width: 855px; height: 50px; font-size: 14px; line-height: 50px; display: table; margin: 0px 15px 0px 15px;}
+        .purchase_table_table3{float: left; width: 855px; height: 20px; font-size: 14px; line-height: 20px; display: table; margin: 0px 15px 0px 15px;}
+        .purchase_table_text{float: right; padding-right: 5px;}
+        .purchase_table_text2{float: right; font-size: 12px;  padding-right: 300px;}
+        .purchase_table_text3{font-size: 12px; color: gray;}
+        .purchase_input_area1{float: left; width: 535px; height: 100px; line-height: 100px; display: table; padding-right: 15px; } .purchase_input_area2{float: left; width: 535px; height: 100px; line-height: 100px; display: table; padding-left: 15px; }   
+        .purchase_input_span_area1{float: right;}
+        .purchase_input_span_area2{float: left;}
+        .purchase_input1{border-radius: 10px; font-size: 24px; color: blue; width:250px; height: 80px; border: 2px solid blue; background-color: white; }
+        .purchase_input2{border-radius: 10px; font-size: 24px; color: white; width:254px; height: 84px; background-color: blue; }
+        .height_purchase{ overflow: hidden;}
+        
+         /*총회원뷰*/
+                
+        .login_box_submit{ width: 500px; height: 50px; margin-bottom: 30px; margin:20px auto 20px auto; display: table; position: relative; width: 100%; display: block; }
+        .login_button{width:80%; margin: 0 auto; height: 48px;  border: 0px; font-size: 20px; font-weight:600; display: table; background-color: #0074e9; color: white; box-shadow: 2px 2px 5px #0074e9; cursor:pointer;}
+        
+        .all_view_join_box{ width: 502px; height: 50px; border-top: 1px solid #e5e5e5; margin: 0 auto; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: right; }
+        .all_view_join_box1{ width: 502px; height: 50px; border-bottom: 1px solid #e5e5e5; margin: 0 auto; border-left: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: right; }
+        
+        .all_view_join_title{float: left; width:134px; height: 50px;  display: table; margin: 0px; padding: 0px; font-size:16px; color: white; line-height:50px; text-align:center;background-color: #0074e9;}
+        .all_view_join_input_box{float: left; width:364px; height: 50px; display: table; margin: 0px; padding: 0px; overflow: hidden; border-left: 1px solid #e5e5e5;}
+        
+        .all_view_join_input{width:100%; height: 50px; float: left; display: table; margin: 0px auto; padding: 0px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .all_view_join_input_file{width:100%; height: 30px; float: left; display: table; margin: 0px auto; line-height:30px; padding: 10px; border:0px solid white; overflow: hidden;  font-size:16px;}
+        .all_view_join_select{width:18%; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #e5e5e5;}
+        .all_view_join_select2{width:364px; height: 50px;  border: 0px; font-size: 20px; font-weight: 500; display: table; padding-left: 5px; float:left; border-left: 1px solid #e5e5e5;}
+        .all_view_input_phone{width:50%; height: 50px;  border: 0px; font-size: 16px; line-height: 50px; display: table; padding-left: 5px; border-left: 1px solid #e5e5e5;}    
+        
+         /*총 회원리스트*/
+        .all_box{ width: 1650px; display:flex; height: 50px; margin: 0px auto; justify-content: center; align-items: center; }
+        .all_box .all_index{flex-grow:0; border: 1px solid #e5e5e5; font-size: 16px; height: 50px; line-height: 50px; text-align: center; background-color: #f5f5f5; }
+        .all_box .all_index:nth-child(1){flex-basis:150px; }
+        .all_box .all_index:nth-child(2){flex-basis:150px; }
+        .all_box .all_index:nth-child(3){flex-basis:100px; }
+        .all_box .all_index:nth-child(4){flex-basis:150px; }
+        .all_box .all_index:nth-child(5){flex-basis:50px; }
+        .all_box .all_index:nth-child(6){flex-basis:150px; }
+        .all_box .all_index:nth-child(7){flex-basis:150px; }
+        .all_box .all_index:nth-child(8){flex-basis:100px; }
+        .all_box .all_index:nth-child(9){flex-basis:150px; }
+        .all_box .all_index:nth-child(10){flex-basis:300px; }
+       
+        
+        .all_box .all_index_box{flex-grow:0; height: 50px; border: 1px solid #e5e5e5;  font-size: 14px; line-height: 50px; text-align: center;}
+        .all_box .all_index_box:nth-child(1){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(2){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(3){flex-basis:100px; }
+        .all_box .all_index_box:nth-child(4){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(5){flex-basis:50px; }
+        .all_box .all_index_box:nth-child(6){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(7){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(8){flex-basis:100px; }
+        .all_box .all_index_box:nth-child(9){flex-basis:150px; }
+        .all_box .all_index_box:nth-child(10){flex-basis:300px; }
+     
+        
+        /*Qna글쓰기*/
+                
+        .login_box_submit{ width: 500px; height: 50px; margin-bottom: 30px; margin:20px auto 20px auto; display: table; position: relative; width: 100%; display: block; }
+        .login_button{width:80%; margin: 0 auto; height: 48px;  border: 0px; font-size: 20px; font-weight:600; display: table; background-color: #0074e9; color: white; box-shadow: 2px 2px 5px #0074e9; cursor:pointer;}
+        
+        .qna_title{ width: 600px; height: 50px; border-top: 1px solid #e5e5e5; margin: 0 auto; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; line-height: 50px; display: table;}
+        .qna_title1{ width: 600px; height: 30px; border-bottom: 1px solid #e5e5e5; margin: 0 auto; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table;}
+        .qna_title2{ width: 600px; height: 500px; border-bottom: 1px solid #e5e5e5; margin: 0 auto; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table;}
+        .qna_title3{ width: 600px; height: 30px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; margin: 0 auto; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table;}
+        
+        .qna_title_sujec{float: left; width:148px; height: 30px;  display: table; font-size:16px; color: white; line-height:50px; text-align:right; background-color: #0074e9;}
+        .qna_title_sujec1{float: left; width:148px; height: 500px;  display: table; font-size:16px; color: white; line-height:50px; text-align:right; background-color: #0074e9;}
+        
+        .qna_input{float: left; width:448px; height: 30px; display: table; font-size:16px; text-align: left;}
+        .qna_input1{float: left; width:448px; height: 496px; display: table; font-size:16px; text-align: left;}
+        
+        .qna_input_box{width:421px; height: 46px; display: table; padding: 0px 0px 0px 15px; font-size:16px; line-height:50px;}
+        .qna_input_box1{width:433px; height: 496px; display: table; padding: 0px 0px 0px 15px; font-size:16px; line-height:300px;}
+        .qna_input_box2{width:433px; height: 30px; display: table; padding: 0px 0px 0px 15px; font-size:16px; line-height:30px; margin: 0px auto; padding-top: 10px;}
+        .qna_sumit{width: 500px; height: 50px; margin-bottom: 30px; margin:20px auto 20px auto; display: table;}
+        .qna_input_radio{padding: 0px 0px 0px 15px;}
+        
+        /*Qna리스트*/
+        .qna_title{width: 600px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table; margin: 0 auto;}
+        
+        .qna_index1{float: left; width: 99px; height: 50px; border-top: 3px solid #e5e5e5; border-bottom: 3px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: center; color: white; background-color: #0074e9; }
+        .qna_index2{float: left; width: 299px; height: 50px; border-top: 3px solid #e5e5e5; border-bottom: 3px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: center; color: white; background-color: #0074e9; }
+        .qna_index3{float: left; width: 99px; height: 50px; border-top: 3px solid #e5e5e5; border-bottom: 3px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: center; color: white; background-color: #0074e9; }
+        .qna_index4{float: left; width: 98px; height: 50px; border-top: 3px solid #e5e5e5; border-bottom: 3px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; font-size: 16px; line-height: 50px; display: table; text-align: center; color: white; background-color: #0074e9; }
+                
+        .qna_index_box1{float: left; width: 99px; height: 50px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 14px; line-height: 50px; display: table; text-align: center;}
+        .qna_index_box2{float: left; width: 299px; height: 50px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 14px; line-height: 50px; display: table; text-align: center;}
+        .qna_index_box3{float: left; width: 99px; height: 50px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 14px; line-height: 50px; display: table; text-align: center;}
+        .qna_index_box4{float: left; width: 98px; height: 50px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-size: 14px; line-height: 50px; display: table; text-align: center;}
+        
+        .qna_write{width: 598px; height: 50px; display: table;}
+        .qna_write_p{float: left; font-size: 14px; line-height: 50px;}
+		.qna_write_w{float: right; font-size: 14px; line-height: 50px;}
+        
+        .qna_search{width: 400px; height: 24px; display: table; margin: 0 auto;}
+        .qna_search_select{float: left; width: 50px; padding: 0px 10px 0px 0px;}
+        .qna_search_select_box{width: 50px;  height: 24px; font-size: 12px; line-height: 20px;}
+        .qna_search_input{float: left; width: 240px; padding: 0px 10px 0px 0px;}
+        .qna_search_input_box{width: 240px; height: 20px; font-size: 12px; line-height: 20px;}
+        .qna_search_input1{float: left; width: 90px;}
+        .qna_search_input_box1{width: 88px; height: 24px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; font-size: 12px; line-height: 20px; color: white; background-color: #0074e9;}
+        
+        /*Qna 뷰페이지*/
+        .qna_title3{width: 600px; height: 50px; margin: 0 auto; line-height: 50px; display: table;}
+        .qna_input2{float: left; width:433px; display: table; font-size:16px; text-align: left; line-height: 50px; padding: 0px 0px 0px 15px;}
+        .qna_input3{float: left; width:433px; display: table; font-size:16px; text-align: left; line-height: 50px; padding: 0px 0px 0px 15px;}
+        .qna_input4{float: left; width:60px; display: table; font-size:16px; text-align: center; line-height: 50px;}
+        .qna_input5{float: right; width:60px; display: table; font-size:16px; text-align: center; line-height: 50px;}
+               
+       /*결제사이트*/
+        
+        .body{background-color: #f5f5f5; overflow: hidden;}
+        .container3{background-color: white; width: 1100px; margin: 0 auto; height: inherit;}
+        
+        .pay_title{margin: 0 auto; width: 1000px; height: 50px; border-bottom: 1px solid #e5e5e5; display: table;}
+        .pay_title1{margin: 0 auto; width: 600px; height: 50px; display: table;}
+        .pay_title2{margin: 0 auto; width: 598px; height: 219px; border-top: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table;}
+        .pay_title3{margin: 0 auto; width: 598px; height: 129px; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table; background-color: #f5f5f5;}
+        .pay_title4{margin: 0 auto; width: 1000px; height: 250px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; display: table;}
+        .pay_title5{float:left; margin: 0 auto; width: 499px; height: 248px; border-right: 1px solid #e5e5e5; display: table;}
+        .pay_title6{float:left; margin: 0 auto; width: 500px; display: table;}
+                
+        .pay_title_span{float: left; font-size: 24px; line-height:50px;}
+        .pay_title_span1{float: right; font-size: 14px; color: #e5e5e5; line-height:50px; padding: 0px 0px 0px 15px;}
+        .pay_title_span2{float: right; font-size: 14px; line-height:50px; padding: 0px 0px 0px 15px;}
+        .pay_title_span3{float: left; width:294px; height:150px; line-height:150px;}
+        .pay_title_span4{float: left; width: 200px; height:50px; line-height:50px; padding: 0px 0px 0px 15px;}
+        .pay_title_span5{float: left; width:100px; heihgt:30px; font-size: 13px; height:30px; line-height:25px; padding: 0px 0px 0px 15px;}
+        .pay_title_span6{float: letf; width: 220px; font-size: 13px; height:30px; line-height:30px;}
+        .pay_title_span7{text-align: left; width: 250px; heihgt:30px; font-size: 13px; height:30px; line-height:30px; padding: 0px 0px 0px 15px;}
+        .pay_title_span8{float: right; width:50px; color: blue; font-size: 13px; height:30px; line-height:20px;}
+        .pay_title_span9{float: left; width:285px; border-bottom: 1px solid #e5e5e5; height:30px; line-height:30px; padding: 0px 0px 0px 15px;}
+        .pay_title_span10{float: right; text-align: right; width:200px; border-bottom: 1px solid #e5e5e5; height:30px; line-height:30px;}
+        .pay_title_span11{float: right; width: 250px; text-align: right; heihgt:30px; font-size: 13px; height:30px; line-height:30px;}
+        .pay_title_span12{float: right; text-align: right; font-size: 13px; height:50px; line-height:50px;}
+        .pay_title_span13{float: right; font-size: 24px; height:50px; line-height:50px; padding: 0px 0px 0px 10px;}
+        .pay_title_span14{text-align: left; width: 250px; heihgt:30px; font-size: 13px; height:30px; line-height:30px; padding: 0px 0px 0px 12px;}
+        .pay_title_span15{float: left; line-height:50px;}
+        .pay_title_span16{float: right; line-height:50px; padding: 0px 0px 0px 15px;}
+        
+        .pay_title_p1{text-align: center; font-size: 24px; color: red; line-height:50px;}
+        .pay_title_p2{text-align: center; font-size: 24px; line-height:30px;}
+        .pay_title_p3{text-align: center; font-size: 18px; line-height:70px;}
+        .pay_title_p4{text-align: center; font-size: 18px; line-height:0px;}
+        .pay_title_p5{text-align: center; line-height:100px;}
+        .pay_title_p6{text-align: center; font-size: 14px; line-height:0px;}
+        .pay_title_p7{margin: 0 auto; width: 300px; text-align: center; font-size: 14px; margin-top: 30px; line-height:20px;}
+        .pay_title_p8{float: left; font-size: 12px; height:30px; line-height:20px; padding: 0px 0px 0px 15px;}
+        
+        .pay_title_b{font-size: 14px; color:red;}
+        
+        .pay_title_input{width: 300px; height: 40px; color: white; text-align: center; font-size: 14px; line-height:40px; background-color: #0074e9;}
+        .pay_title_input1{float: right; width: 150px; height: 30px; text-align: center; font-size: 14px; line-height:30px; background-color: #f5f5f5;}
+        .pay_title_input2{float: left; width: 150px; height: 30px; text-align: center; font-size: 14px; line-height:30px; background-color: #f5f5f5;}
+        .pay_title_input3{border-radius: 10px; font-size: 24px; color: blue; width:250px; height: 80px; border: 2px solid blue; background-color: white; }
+        .pay_title_input4{border-radius: 10px; font-size: 24px; color: white; width:254px; height: 84px; background-color: blue; }
+        
+        /*관리자 Qna리스트*/
+        .admin_qna_title{width: 800px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table; margin: 0 auto;}
+        
+        /*구매 리스트*/
+        .order_box{ width: 1800px; display:flex; height: 60px; text-align: center; margin: 0px auto; justify-content: center; align-items: center;}
+        .order_box .order_index{flex-grow:0; border: 1px solid #e5e5e5; font-size: 16px; height: 50px; line-height: 50px; text-align: center; background-color: #f5f5f5; }
+        .order_box .order_index:nth-child(1){flex-basis:80px; }
+        .order_box .order_index:nth-child(2){flex-basis:150px; }
+        .order_box .order_index:nth-child(3){flex-basis:150px; }
+        .order_box .order_index:nth-child(4){flex-basis:150px; }
+        .order_box .order_index:nth-child(5){flex-basis:150px; }
+        .order_box .order_index:nth-child(6){flex-basis:320px; }
+        .order_box .order_index:nth-child(7){flex-basis:150px; }
+        .order_box .order_index:nth-child(8){flex-basis:150px; }
+        .order_box .order_index:nth-child(9){flex-basis:100px; }
+        .order_box .order_index:nth-child(10){flex-basis:80px; }
+        .order_box .order_index:nth-child(11){flex-basis:150px; }
+        .order_box .order_index:nth-child(12){flex-basis:150px; }
+        .order_box .order_index:nth-child(13){flex-basis:150px; }
+        .order_box .order_index:nth-child(14){flex-basis:150px; }
+        .order_box .order_index:nth-child(15){flex-basis:150px; }
+        .order_box .order_index:nth-child(16){flex-basis:150px; }
+        .order_box .order_index:nth-child(17){flex-basis:80px; }
+        
+       
+        
+        .order_box .order_index_box{flex-grow:0; height: 60px; border: 1px solid #e5e5e5;  font-size: 14px; line-height: 50px; text-align: center;}
+        .order_box .order_index_box:nth-child(1){flex-basis:80px; }
+        .order_box .order_index_box:nth-child(2){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(3){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(4){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(5){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(6){flex-basis:320px; line-height: 30px;}
+        .order_box .order_index_box:nth-child(7){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(8){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(9){flex-basis:100px; }
+        .order_box .order_index_box:nth-child(10){flex-basis:80px; }
+        .order_box .order_index_box:nth-child(11){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(12){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(13){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(14){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(15){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(16){flex-basis:150px; }
+        .order_box .order_index_box:nth-child(17){flex-basis:80px; }
+        
+        
+        /*상품 리스트*/
+        .product_box{ width: 1800px; display:flex; height: 60px; margin: 0px auto;   justify-content: center; align-items: center; }
+        .product_box .product_index{flex-grow:0; border: 1px solid #e5e5e5; font-size: 16px; height: 60px; line-height: 60px; text-align: center; background-color: #f5f5f5; }
+        .product_box .product_index:nth-child(1){flex-basis:50px; }
+        .product_box .product_index:nth-child(2){flex-basis:150px; }
+        .product_box .product_index:nth-child(3){flex-basis:120px; }
+        .product_box .product_index:nth-child(4){flex-basis:80px; }
+        .product_box .product_index:nth-child(5){flex-basis:80px; }
+        .product_box .product_index:nth-child(6){flex-basis:80px; }
+        .product_box .product_index:nth-child(7){flex-basis:100px; }
+        .product_box .product_index:nth-child(8){flex-basis:100px; }
+        .product_box .product_index:nth-child(9){flex-basis:150px; }
+        .product_box .product_index:nth-child(10){flex-basis:150px; }
+        .product_box .product_index:nth-child(11){flex-basis:150px; }
+        .product_box .product_index:nth-child(12){flex-basis:150px; }
+        .product_box .product_index:nth-child(13){flex-basis:150px; }
+        .product_box .product_index:nth-child(14){flex-basis:150px; }
+        .product_box .product_index:nth-child(15){flex-basis:90px; }
+        .product_box .product_index:nth-child(16){flex-basis:50px; }
+        
+        
+       
+        
+        .product_box .product_index_box{flex-grow:0; height: 60px; border: 1px solid #e5e5e5;  font-size: 14px; line-height: 60px; text-align: center;}
+        .product_box .product_index_box:nth-child(1){flex-basis:50px;}
+        .product_box .product_index_box:nth-child(2){flex-basis:150px; line-height: 30px;} 
+        .product_box .product_index_box:nth-child(3){flex-basis:120px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(4){flex-basis:80px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(5){flex-basis:80px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(6){flex-basis:80px;}
+        .product_box .product_index_box:nth-child(7){flex-basis:100px;}
+        .product_box .product_index_box:nth-child(8){flex-basis:100px;}
+        .product_box .product_index_box:nth-child(9){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(10){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(11){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(12){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(13){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(14){flex-basis:150px; line-height: 30px;}
+        .product_box .product_index_box:nth-child(15){flex-basis:90px;}
+        .product_box .product_index_box:nth-child(16){flex-basis:50px;}
+        
+        
+        /*상품 리스트*/
+        .picture_box{ width: 1600px; display:flex; height: 60px; margin: 0px auto;   justify-content: center; align-items: center; }
+        .picture_box .picture_index{flex-grow:0; border: 1px solid #e5e5e5; font-size: 16px; height: 60px; line-height: 60px; text-align: center; background-color: #f5f5f5; }
+        .picture_box .picture_index:nth-child(1){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(2){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(3){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(4){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(5){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(6){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(7){flex-basis:200px; }
+        .picture_box .picture_index:nth-child(8){flex-basis:200px; }
+        
+        /*관리자 구매 리스트*/
+        .all_order_list_box{ width: 1800px; display:flex;  height: 50px; margin: 0px auto;   justify-content: center; align-items: center; }
+        .all_order_list_box .order_index{flex-basis:150px; border: 1px solid #e5e5e5; font-size: 16px; height: 50px; line-height: 50px; text-align: center; background-color: #f5f5f5; }
+        .all_order_list_box .order_index:nth-child(1){flex-basis:50px; }
+        .all_order_list_box .order_index:nth-child(2){flex-basis:80px; }
+        .all_order_list_box .order_index:nth-child(3){flex-basis:200px; }
+        .all_order_list_box .order_index:nth-child(4){flex-basis:200px; }
+        .all_order_list_box .order_index:nth-child(9){flex-basis:200px; }
+        .all_order_list_box .order_index:nth-child(13){flex-basis:200px; }
+        
+      
+        .all_order_list_box .order_index_box{ flex-basis:150px; height: 50px; border: 1px solid #e5e5e5;  font-size: 14px; line-height: 50px; text-align: center;}
+        .all_order_list_box .order_index_box:nth-child(1){flex-basis:50px; }
+        .all_order_list_box .order_index_box:nth-child(2){flex-basis:80px; }
+        .all_order_list_box .order_index_box:nth-child(3){flex-basis:200px; }
+        .all_order_list_box .order_index_box:nth-child(4){flex-basis:200px; }
+        .all_order_list_box .order_index_box:nth-child(9){flex-basis:200px; }
+        .all_order_list_box .order_index_box:nth-child(13){flex-basis:200px; }
+      	.all_order_list_page{width:100% ; margint}
+      	
+      	
+      	
+        
+       
+        
+        .picture_box .picture_index_box{flex-grow:0; height: 60px; border: 1px solid #e5e5e5; font-size: 14px; line-height: 60px; text-align: center; margin: 0px auto; justify-content: center; align-items: center;}
+        .picture_box .picture_index_box:nth-child(1){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(2){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(3){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(4){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(5){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(6){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(7){flex-basis:200px; line-height: 30px;}
+        .picture_box .picture_index_box:nth-child(8){flex-basis:200px; line-height: 30px;}
+        
+        .qna_title3{ width: 600px; height: 30px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; margin: 0 auto; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; display: table;}
+        
+        .center{margin: 0 auto;, width: 200px;}
+        
+        .container3{width:600px; margin: 0 auto; height: auto;}
+        
+        .container4{width:200px; margin: 0 auto; height: auto;}
